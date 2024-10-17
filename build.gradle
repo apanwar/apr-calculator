@@ -1,0 +1,21 @@
+plugins {
+    id 'groovy'
+}
+
+group = 'io.apanwar.apr.calculator'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.groovy:groovy:4.0.14'
+    implementation group: 'org.apache.poi', name: 'poi', version: '5.3.0'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
